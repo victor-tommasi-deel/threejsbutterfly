@@ -16,7 +16,7 @@ class App extends React.Component {
   componentDidMount = () => {
     const butterfly = createButterfly();
     const start = init(butterfly);
-    const viewer = document.getElementById('viewer');
+    const { viewer } = this.refs;
     viewer.appendChild(start.renderer.domElement);
     const { renderer, scene, camera } = start;
     this.setState({
